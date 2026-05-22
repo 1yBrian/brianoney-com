@@ -488,12 +488,13 @@ footer {
   align-items: center;
   padding: 22px 0;
   cursor: pointer;
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  font-weight: 500;
   color: var(--ink);
   list-style: none;
   gap: 16px;
+  letter-spacing: -0.01em;
 }
 
 .faq-item summary::-webkit-details-marker { display: none; }
