@@ -8,7 +8,7 @@ Copy these exactly — or adjust tone to match any platform-specific context.
 
 ### Headline
 ```
-Advisor · Trainer · Writer | Founder, Meliorist Group | Meliorism 2.0 | Signal-OS
+Advisor · Trainer · Writer | Founder, Meliorist Group | Meliorism 2.0
 ```
 
 ### About Section
@@ -23,22 +23,18 @@ The advisory work is growth-participation. I take a stake in your upside: $10,00
 
 I co-host Cracking the Code to Success & Profits (CTCSP) with Scott Sylvan Bell — a weekly program for business owners ready to move from knowing strategy to actually implementing it.
 
-I also run Signal-OS — a daily briefing for trainers, coaches, and educators navigating an AI-shaped economy. Donation-based. Signal over noise. Published at signal-os.org.
-
-And I write. Meditations on Meliorism on Substack — essays on the philosophy, the human advantage in an AI era, and what it looks like when subtraction works.
+I write. Meditations on Meliorism on Substack — essays on the philosophy, the human advantage in an AI era, and what it looks like when subtraction works.
 
 If any of this resonates: explore@brianoney.com. No form. Real email.
 ```
 
 ### Featured Links (add these in LinkedIn's Featured section)
 1. **brianoney.com** — "Advisor. Trainer. Writer. Meliorism 2.0."
-2. **signal-os.org** — "Signal-OS — daily briefing for trainers and coaches in the AI economy"
-3. **meliorism.substack.com** — "Meditations on Meliorism — essays on the philosophy"
+2. **meliorism.substack.com** — "Meditations on Meliorism — essays on the philosophy"
 
 ### Experience Titles to Use
 - **Meliorist Group** — Founder & Advisor *(current)*
 - **CTCSP** — Co-Host *(current)* — "Weekly business training program with Scott Sylvan Bell"
-- **Signal-OS** — Founder & Publisher *(current)*
 
 ---
 
@@ -48,7 +44,7 @@ If any of this resonates: explore@brianoney.com. No form. Real email.
 ```
 Advisor · Trainer · Writer · SF
 Finding what's already there.
-Meliorism 2.0 · Signal-OS
+Meliorism 2.0
 ↓ brianoney.com
 ```
 
@@ -57,9 +53,9 @@ Meliorism 2.0 · Signal-OS
 
 ### Content alignment notes
 - Voice: direct, grounded, no motivational padding
-- Topics: Meliorism 2.0 principles, Signal-OS briefings, advisory insights, quotes from the writing
+- Topics: Meliorism 2.0 principles, advisory insights, quotes from the writing
 - Avoid: generic "coach" language, inspirational filler, "help" as a primary verb
-- Strong content angles: the Michelangelo Premise, subtraction before addition, AI and human-centered work, Signal-OS daily signal
+- Strong content angles: the Michelangelo Premise, subtraction before addition, AI and human-centered work
 
 ---
 
@@ -79,17 +75,15 @@ I work from a philosophy called Meliorism 2.0 — the position that the better v
 
 On this channel: conversations about Meliorism 2.0, the human advantage in an AI economy, advisory work, training, and what it looks like when subtraction actually works.
 
-I also run Signal-OS — a daily briefing for trainers, coaches, and educators navigating AI. And I write Meditations on Meliorism on Substack.
+I write Meditations on Meliorism on Substack.
 
 → brianoney.com
-→ signal-os.org
 → meliorism.substack.com
 → explore@brianoney.com
 ```
 
 ### Channel Links to Add
 - brianoney.com
-- signal-os.org
 - meliorism.substack.com
 - linkedin.com/in/brian7oney
 
@@ -117,4 +111,4 @@ Note: The site doesn't have a sitemap.xml yet — flag this and we can generate 
 ---
 
 ## Sitemap needed
-The site currently has no sitemap.xml. This tells Google (and AI crawlers) the full list of pages to index. Pages: index, about, philosophy, work-with-me, signal-os, writing, faq. Flag me to build this — it's a 5-minute task.
+The site currently has no sitemap.xml. This tells Google (and AI crawlers) the full list of pages to index. Pages: index, about, philosophy, work-with-me, writing, faq. Flag me to build this — it's a 5-minute task.
