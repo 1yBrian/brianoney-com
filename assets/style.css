@@ -171,6 +171,62 @@ nav {
   display: block; width: 100%; height: 100%; object-fit: cover;
 }
 
+/* Headline row — H1 and small transparent mirror side-by-side */
+.hero-headline-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.hero-headline-row h1 { margin-bottom: 0; flex: 0 0 auto; }
+.hero-mirror-ornament {
+  flex: 0 1 220px;
+  margin: 0;
+  opacity: 0.35;
+  border-radius: 8px;
+  overflow: hidden;
+  filter: saturate(0.7);
+  aspect-ratio: 3 / 2;
+  align-self: center;
+}
+.hero-mirror-ornament picture, .hero-mirror-ornament img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+}
+@media (max-width: 720px) {
+  .hero-headline-row { gap: 18px; }
+  .hero-mirror-ornament { flex-basis: 140px; opacity: 0.3; }
+}
+
+/* Envelope-thin horizon strip — panoramic SF image */
+.hero-envelope {
+  margin: 36px 0 56px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.hero-envelope picture, .hero-envelope img {
+  display: block; width: 100%; height: auto; aspect-ratio: 3.5 / 1; object-fit: cover;
+}
+.hero-envelope figcaption {
+  position: absolute;
+  bottom: 6px; right: 10px;
+  font-size: 11px;
+  color: #fff;
+  font-style: italic;
+  font-family: var(--sans);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  opacity: 0.85;
+}
+.hero-envelope figcaption a { color: #fff; text-decoration: underline; }
+
+/* Separator variant — used between mission and FAQ for breathing room */
+.hero-envelope--separator {
+  margin: 72px 0 16px;
+  border-radius: 4px;
+}
+
 /* Reverse strip with portrait beside quote */
 .reverse-strip--with-portrait { padding: 64px 24px; }
 .reverse-strip--with-portrait .reverse-strip-inner {
