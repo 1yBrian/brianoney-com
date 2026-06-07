@@ -163,9 +163,21 @@
         <p class="intro">San Francisco. Father. Advisor. Writer. Traveler. I've spent a career in rooms where smart people couldn't see what they already had. That pattern became a practice.</p>
       </div>
       <div style="flex:0 0 240px;">
-        <img src="assets/brian-headshot.png"
-             alt="Brian Oney — San Francisco"
-             style="width:240px; border-radius:4px; display:block; object-fit:cover; aspect-ratio:4/5; object-position:center top;">
+        <picture>
+          <source type="image/avif"
+                  srcset="assets/brian-headshot-opt-400.avif 400w, assets/brian-headshot-opt-800.avif 800w, assets/brian-headshot-opt-1200.avif 1200w"
+                  sizes="240px">
+          <source type="image/webp"
+                  srcset="assets/brian-headshot-opt-400.webp 400w, assets/brian-headshot-opt-800.webp 800w, assets/brian-headshot-opt-1200.webp 1200w"
+                  sizes="240px">
+          <img src="assets/brian-headshot-opt-800.jpg"
+               srcset="assets/brian-headshot-opt-400.jpg 400w, assets/brian-headshot-opt-800.jpg 800w, assets/brian-headshot-opt-1200.jpg 1200w"
+               sizes="240px"
+               width="240" height="300"
+               alt="Brian Oney — San Francisco"
+               loading="lazy" decoding="async"
+               style="width:240px; border-radius:4px; display:block; object-fit:cover; aspect-ratio:4/5; object-position:center top;">
+        </picture>
       </div>
     </div>
   </div>

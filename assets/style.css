@@ -157,6 +157,122 @@ nav {
   margin-bottom: 40px;
 }
 
+/* Wide hero visual (full-width image moment under the headline) */
+.hero-visual {
+  margin: 0 0 64px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 30px 80px -32px rgba(26,26,24,0.2);
+}
+.hero-visual picture, .hero-visual img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Reverse strip with portrait beside quote */
+.reverse-strip--with-portrait { padding: 64px 24px; }
+.reverse-strip--with-portrait .reverse-strip-inner {
+  max-width: var(--max-wide); margin: 0 auto;
+  display: grid; grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 48px; align-items: center;
+}
+.reverse-strip--with-portrait .reverse-portrait {
+  margin: 0; border-radius: 10px; overflow: hidden;
+  aspect-ratio: 3 / 4; background: #2a241e;
+  border: 1px solid #3a342e;
+}
+.reverse-strip--with-portrait .reverse-portrait picture,
+.reverse-strip--with-portrait .reverse-portrait img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top;
+}
+.reverse-strip--with-portrait .reverse-strip-quote { text-align: left; }
+.reverse-strip--with-portrait blockquote {
+  margin: 0 0 16px; max-width: 720px;
+  text-align: left;
+}
+.reverse-strip--with-portrait cite { display: block; text-align: left; }
+
+/* Inline figure inside prose (e.g. Michelangelo marble) */
+.inline-figure { margin: 28px 0; }
+.inline-figure picture, .inline-figure img {
+  display: block; width: 100%; height: auto;
+  border-radius: 10px; aspect-ratio: 3 / 2; object-fit: cover;
+  border: 1px solid var(--border);
+}
+.inline-figure figcaption {
+  margin-top: 10px; font-size: 12px; color: var(--muted);
+  text-align: right; font-style: italic;
+}
+.inline-figure figcaption a { color: var(--muted); text-decoration: underline; }
+
+/* Page header with image (work-with-me) */
+.page-header--with-image {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, 380px);
+  gap: 56px; align-items: center;
+  padding-right: 0;
+}
+.page-header--with-image .page-header-copy { min-width: 0; }
+.page-header-image {
+  margin: 0; border-radius: 10px; overflow: hidden;
+  aspect-ratio: 3 / 4; background: var(--surface); border: 1px solid var(--border);
+  box-shadow: 0 24px 60px -28px rgba(26,26,24,0.18);
+}
+.page-header-image picture, .page-header-image img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top;
+}
+@media (max-width: 900px) {
+  .page-header--with-image { grid-template-columns: 1fr; gap: 32px; }
+  .page-header-image { max-width: 320px; }
+}
+@media (max-width: 720px) {
+  .reverse-strip--with-portrait .reverse-strip-inner {
+    grid-template-columns: 1fr; gap: 28px;
+  }
+  .reverse-strip--with-portrait .reverse-portrait { max-width: 220px; margin: 0 auto; }
+  .reverse-strip--with-portrait .reverse-strip-quote { text-align: center; }
+  .reverse-strip--with-portrait blockquote { text-align: center; }
+  .reverse-strip--with-portrait cite { text-align: center; }
+}
+
+/* Hero variant with portrait image alongside copy (legacy, kept for back-compat) */
+.hero--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 420px);
+  gap: 56px;
+  align-items: center;
+}
+.hero--with-image .hero-copy { min-width: 0; }
+.hero--with-image .hero-copy h1 { max-width: 100%; }
+.hero-portrait {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 24px 60px -28px rgba(26, 26, 24, 0.18);
+}
+.hero-portrait picture,
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+@media (max-width: 720px) {
+  .hero--with-image {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-portrait {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+
 /* ─── BUTTON ────────────────────────────── */
 
 .btn {
