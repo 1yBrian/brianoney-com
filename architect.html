@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Brian Oney — Strategic Infrastructure AI Architect</title>
+<meta name="description" content="Brian Oney builds AI that grows into the infrastructure you already have — and customizes it so closely it feels native to your brand. Tech-fluent, human-first, sociology-rooted.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Brian Oney — Strategic Infrastructure AI Architect">
+<meta property="og:description" content="AI grown into your infrastructure until it feels native — never bolted on. Tech-fluent, human-first, sociology-rooted.">
+<meta property="og:image" content="assets/bio/headshot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EC; --cream-2:#F4ECDC; --sage-bg:#EEF1E6;
+    --forest:#344E41; --forest-deep:#23362B; --sage:#6E9173;
+    --gold:#B6802A; --gold-soft:#D7A648;
+    --bark:#33291E; --bark-soft:#5E5140;
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    --measure:40rem;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--cream); color:var(--bark);
+    font-family:var(--sans); font-size:clamp(16px,1.05vw + 13px,18px);
+    line-height:1.7; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:62rem; margin:0 auto; padding:0 1.4rem}
+  .measure{max-width:var(--measure)}
+  h1,h2,h3{font-family:var(--serif); font-weight:500; line-height:1.12; color:var(--forest-deep); letter-spacing:-0.01em}
+  a{color:var(--gold); text-underline-offset:3px; text-decoration-thickness:1px}
+  a:hover{color:var(--forest)}
+  p{margin:0 0 1.1rem}
+  em{font-style:italic}
+
+  .seam{position:relative; height:1px; margin:3.2rem auto; max-width:62rem;
+        background:linear-gradient(90deg,transparent,rgba(182,128,42,.45) 18%,rgba(182,128,42,.45) 82%,transparent)}
+  .seam::after{content:""; position:absolute; left:50%; top:50%; width:9px; height:9px;
+        transform:translate(-50%,-50%) rotate(45deg);
+        background:var(--cream); border:1.5px solid var(--gold); border-radius:1px}
+  .seam.flow::before{content:""; position:absolute; top:0; left:0; height:1px; width:34%;
+        background:linear-gradient(90deg,transparent,var(--gold-soft),transparent);
+        animation:sap 7s linear infinite}
+  @keyframes sap{0%{transform:translateX(-40%);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateX(360%);opacity:0}}
+
+  .hero{padding:clamp(3.2rem,8vw,6rem) 0 1rem}
+  .eyebrow{font-family:var(--sans); font-size:.8rem; letter-spacing:.18em; text-transform:uppercase;
+           color:var(--sage); font-weight:600; margin:0 0 1.3rem}
+  .hero-grid{display:grid; gap:clamp(1.6rem,4vw,3rem); grid-template-columns:1fr}
+  .lede{font-family:var(--serif); font-weight:400; font-size:clamp(1.55rem,3.4vw + .6rem,2.7rem);
+        line-height:1.18; color:var(--forest-deep); margin:0 0 1.4rem; letter-spacing:-0.015em}
+  .lede b{font-weight:600; color:var(--gold)}
+  .hero-sub{font-size:1.06rem; color:var(--bark-soft); max-width:34rem}
+  .portrait{position:relative; justify-self:start}
+  .portrait img{display:block; width:clamp(150px,42vw,232px); height:auto; border-radius:14px;
+        box-shadow:0 18px 40px -18px rgba(52,40,25,.45); border:5px solid #fff}
+  .name{font-size:1.18rem; font-weight:600; color:var(--forest); font-family:var(--sans); margin:.7rem 0 .15rem}
+  .role{font-size:.95rem; color:var(--bark-soft)}
+  @media(min-width:760px){
+    .hero-grid{grid-template-columns:1fr auto; align-items:end}
+    .portrait{justify-self:end}
+  }
+
+  section{padding:.4rem 0}
+  .kicker{font-family:var(--sans); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
+          color:var(--gold); font-weight:600; margin:0 0 .9rem}
+  h2{font-size:clamp(1.5rem,2.4vw + .8rem,2.15rem); margin:0 0 1rem}
+  .big{font-size:1.18rem; color:var(--bark)}
+
+  .chips{display:flex; flex-wrap:wrap; gap:.55rem; margin:.4rem 0 0; padding:0; list-style:none}
+  .chips li{font-family:var(--sans); font-size:.92rem; font-weight:500; color:var(--forest);
+            background:var(--sage-bg); border:1px solid rgba(110,145,115,.35);
+            padding:.42rem .85rem; border-radius:999px}
+
+  .band{position:relative; margin:1rem 0; border-radius:18px; overflow:hidden; border:1px solid rgba(110,145,115,.3)}
+  .band img{display:block; width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0}
+  .band .veil{position:absolute; inset:0; z-index:1;
+        background:linear-gradient(180deg,rgba(251,246,236,.58),rgba(244,236,220,.74))}
+  .band .band-in{position:relative; z-index:2; padding:clamp(1.6rem,4vw,2.8rem)}
+  .band h2{color:var(--forest-deep)}
+  .band p{color:var(--bark)}
+  .pull{font-family:var(--serif); font-style:italic; font-size:1.18rem; color:var(--forest)}
+  .band.feature{min-height:clamp(220px,40vw,330px); display:flex; align-items:flex-end}
+  .band.feature .band-in{width:100%}
+  .band.feature .pull{font-size:clamp(1.3rem,2.6vw,1.7rem); margin:0}
+
+  .truths{display:grid; gap:1.3rem; grid-template-columns:1fr; margin-top:1.2rem}
+  @media(min-width:680px){.truths{grid-template-columns:1fr 1fr; gap:1.8rem; max-width:52rem}}
+  .truth h3{font-size:1.12rem; margin:0 0 .4rem; color:var(--forest)}
+  .truth p{font-size:.99rem; color:var(--bark-soft); margin:0}
+
+  .tongue{background:var(--cream-2); border:1px solid rgba(182,128,42,.25); border-radius:16px;
+          padding:clamp(1.3rem,3vw,2rem); margin-top:.6rem}
+  .tongue p{margin-bottom:.6rem}
+  .tongue .tag{font-size:.85rem; color:var(--sage); font-style:italic; margin:0}
+
+  .cta{text-align:center; padding:clamp(2.4rem,6vw,4rem) 0 1rem}
+  .cta h2{margin-bottom:.8rem}
+  .btn{display:inline-block; font-family:var(--sans); font-weight:600; font-size:1.02rem;
+       color:#fff; background:var(--forest); padding:.85rem 1.7rem; border-radius:999px;
+       text-decoration:none; box-shadow:0 12px 26px -12px rgba(52,78,65,.7); transition:transform .2s ease,background .2s ease}
+  .btn:hover{background:var(--forest-deep); color:#fff; transform:translateY(-1px)}
+
+  footer{border-top:1px solid rgba(110,145,115,.3); margin-top:3rem; padding:2rem 0 3rem; color:var(--bark-soft); font-size:.86rem}
+  footer a{color:var(--forest)}
+  .colophon{font-style:italic; color:var(--sage); margin-top:.4rem}
+
+  .js .r{transform:translateY(16px); transition:transform .7s ease}
+  .js .r.in{transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .r{transform:none!important; transition:none}
+    .seam.flow::before{animation:none; display:none}
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="eyebrow">Brian Oney · Partner-Ecosystem Architect</p>
+    <div class="hero-grid">
+      <div class="measure r">
+        <p class="lede">There are two languages in every technology project: the one engineers speak — and the one your people actually <b>live in</b>.</p>
+        <p class="hero-sub">I'm fluent in both. I design AI that grows into the infrastructure you already have, until it feels like a native part of your brand — not something bolted on from the outside.</p>
+      </div>
+      <figure class="portrait r">
+        <img src="assets/bio/headshot.jpg" alt="Brian Oney, smiling, in front of a warm brick wall and a full bookshelf" width="232">
+        <p class="name">Brian Oney</p>
+        <p class="role">Strategic Infrastructure AI Architect</p>
+      </figure>
+    </div>
+  </header>
+
+  <div class="seam flow"></div>
+
+  <!-- FEATURE NATURE BAND -->
+  <section class="r">
+    <div class="band feature">
+      <img src="assets/bio/forest.jpg" alt="A lush tree-fern forest with white calla lilies rising toward the light">
+      <div class="veil"></div>
+      <div class="band-in">
+        <p class="kicker">The approach</p>
+        <p class="pull">Tend what's already there. Don't replace it — cultivate it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I BUILD -->
+  <section class="r">
+    <p class="kicker">What I actually do</p>
+    <h2>A Strategic Infrastructure AI Architect</h2>
+    <div class="measure">
+      <p class="big">In plain terms: I design AI that integrates into the infrastructure you already run, and I customize it closely enough that it feels native — not a generic tool wearing your logo.</p>
+      <p>Same architecture underneath. A completely different home on top. I've personally built systems that adapt across wildly different organizations and customize fast enough to feel like they were always yours.</p>
+    </div>
+  </section>
+
+  <div class="seam"></div>
+
+  <!-- WHO FOR -->
+  <section class="r">
+    <p class="kicker">Who I build for</p>
+    <h2>The people most "AI solutions" skip past</h2>
+    <p class="measure">You don't need a 200-page transformation roadmap. You need something that works inside your world, in your voice, and respects the way you already do things — by next week, not next year.</p>
+    <ul class="chips" aria-label="Who Brian builds for">
+      <li>Small &amp; midsize businesses</li>
+      <li>Leaders</li>
+      <li>Trainers</li>
+      <li>Coaches</li>
+      <li>Nonprofits</li>
+      <li>Tutors</li>
+    </ul>
+  </section>
+
+  <div class="seam"></div>
+
+  <!-- THE DIFFERENCE -->
+  <section class="r">
+    <p class="kicker">Why this is different</p>
+    <h2>My foundation isn't only technical. It's sociology.</h2>
+    <div class="measure">
+      <p>Specifically <em>symbolic interactionism</em> — the study of how people make meaning together. It left me a little obsessed with how organizations actually function at the human level: <em>why</em> your clients choose you, and <em>why</em> they refer others to you.</p>
+    </div>
+    <div class="truths measure">
+      <div class="truth">
+        <h3>People don't buy systems.</h3>
+        <p>They buy trust, meaning, and recognition. The technology only matters if it carries those across.</p>
+      </div>
+      <div class="truth">
+        <h3>They refer you when the story is worth passing on.</h3>
+        <p>If the infrastructure underneath doesn't protect that story, it doesn't matter how clever the code is.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam"></div>
+
+  <!-- GROWN IN, NOT BOLTED ON -->
+  <section class="r">
+    <div class="band">
+      <img src="assets/bio/canopy.jpg" alt="Looking up the leaning trunks of old trees that have grown together into one canopy">
+      <div class="veil"></div>
+      <div class="band-in measure">
+        <p class="kicker">How it's built</p>
+        <h2>Grown in, not bolted on</h2>
+        <p>A grafted branch heals into its rootstock until sap flows across the join and you can't tell where one begins and the other ends. That's the standard I build to.</p>
+        <p class="pull">I design for both layers at once — the technical one that has to run, and the human one that has to feel right.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam flow"></div>
+
+  <!-- COMMON TONGUE -->
+  <section class="r">
+    <p class="kicker">A confession</p>
+    <h2>I speak the Common Tongue</h2>
+    <div class="tongue measure">
+      <p>I understand tech design — but I refuse to hide behind it. (Forgive the nerd in me: as a Lord of the Rings and Critical Role fan, I can't help calling plain human language the <em>Common Tongue</em>.)</p>
+      <p>Think of it like running a good campaign. I build the world and the systems beneath it, so you and your people are free to be the heroes inside it. You shouldn't have to learn my language to get value from my work — I'll meet you in yours.</p>
+      <p class="tag">Roll for initiative. 🎲</p>
+    </div>
+  </section>
+
+  <div class="seam"></div>
+
+  <!-- CTA -->
+  <section class="cta r">
+    <h2>Been told AI is too complex, too generic, or too cold for what you do?</h2>
+    <p class="measure" style="margin:0 auto 1.6rem">Let's talk. I build the kind that fits.</p>
+    <a class="btn" href="mailto:brian@melioristgroup.com?subject=Let%27s%20talk%20infrastructure">Start a conversation</a>
+  </section>
+
+  <footer>
+    <p>Photo: Brian Oney · San Francisco, CA</p>
+    <p class="colophon">Set in Fraunces (the human) &amp; Inter (the engineer) — two tongues, one page.</p>
+  </footer>
+
+</main>
+
+<script>
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('js');
+    var els = [].slice.call(document.querySelectorAll('.r'));
+    function reveal(e){ e.classList.add('in'); }
+    function inView(e){ return e.getBoundingClientRect().top < window.innerHeight * 0.92; }
+    els.forEach(function(e){ if (inView(e)) reveal(e); });
+    if ('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(ents){
+        ents.forEach(function(en){ if(en.isIntersecting){ reveal(en.target); io.unobserve(en.target); } });
+      }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){ if(!e.classList.contains('in')) io.observe(e); });
+    } else { els.forEach(reveal); }
+    setTimeout(function(){ els.forEach(reveal); }, 1400);
+  })();
+</script>
+</body>
+</html>
