@@ -99,6 +99,23 @@
   .tongue p{margin-bottom:.6rem}
   .tongue .tag{font-size:.85rem; color:var(--sage); font-style:italic; margin:0}
 
+  /* d20 initiative roller */
+  .roll{margin-top:.9rem}
+  .roll-btn{display:inline-flex; align-items:center; gap:.8rem; background:none; border:0; cursor:pointer; padding:.2rem; font:inherit}
+  .roll-btn:focus-visible{outline:2px solid var(--gold); outline-offset:4px; border-radius:8px}
+  .d20{width:54px; height:54px; display:inline-grid; place-items:center; background:var(--forest); color:var(--gold-soft);
+       clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);
+       font-family:var(--serif); font-weight:600; font-size:1.3rem; transition:transform .2s ease}
+  .roll-btn:hover .d20{transform:translateY(-2px)}
+  .roll-label{font-family:var(--serif); font-style:italic; color:var(--forest); font-size:1.1rem; border-bottom:1px dashed var(--gold)}
+  .roll-btn:hover .roll-label{color:var(--gold)}
+  .roll-out{margin:.85rem 0 0; color:var(--bark-soft); font-size:.95rem; min-height:1.5em}
+  @keyframes d20spin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(200deg) scale(1.14)}100%{transform:rotate(360deg) scale(1)}}
+  .d20.rolling{animation:d20spin .72s ease-in-out}
+  .d20.crit{background:var(--gold); color:var(--forest-deep); box-shadow:0 0 0 3px rgba(215,166,72,.45), 0 8px 20px -6px rgba(182,128,42,.7)}
+  .d20.fail{background:#7A5B3A; color:#F3E7D4}
+  @media(prefers-reduced-motion:reduce){ .d20.rolling{animation:none} }
+
   .cta{text-align:center; padding:clamp(2.4rem,6vw,4rem) 0 1rem}
   .cta h2{margin-bottom:.8rem}
   .btn{display:inline-block; font-family:var(--sans); font-weight:600; font-size:1.02rem;
@@ -226,7 +243,13 @@
     <div class="tongue measure">
       <p>I understand tech design — but I refuse to hide behind it. (Forgive the nerd in me: as a Lord of the Rings and Critical Role fan, I can't help calling plain human language the <em>Common Tongue</em>.)</p>
       <p>Think of it like running a good campaign. I build the world and the systems beneath it, so you and your people are free to be the heroes inside it. You shouldn't have to learn my language to get value from my work — I'll meet you in yours.</p>
-      <p class="tag">Roll for initiative. 🎲</p>
+      <div class="roll" data-roll>
+        <button type="button" class="roll-btn" aria-label="Roll a twenty-sided die for initiative">
+          <span class="d20" aria-hidden="true"><span class="d20-num">20</span></span>
+          <span class="roll-label">Roll for initiative</span>
+        </button>
+        <p class="roll-out" role="status" aria-live="polite">Click the die — let's see what the dice gods say. 🎲</p>
+      </div>
     </div>
   </section>
 
@@ -261,6 +284,45 @@
       els.forEach(function(e){ if(!e.classList.contains('in')) io.observe(e); });
     } else { els.forEach(reveal); }
     setTimeout(function(){ els.forEach(reveal); }, 1400);
+  })();
+
+  // d20 initiative roller
+  (function(){
+    var box = document.querySelector('[data-roll]'); if(!box) return;
+    var btn = box.querySelector('.roll-btn');
+    var die = box.querySelector('.d20');
+    var num = box.querySelector('.d20-num');
+    var out = box.querySelector('.roll-out');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var rolling = false;
+    function flavor(n){
+      if (n === 20) return "Natural 20 — critical hit. The build practically writes itself. ⚔️";
+      if (n === 1)  return "Natural 1 — a critical miss… so we reroll reality and try again. 🛡️";
+      if (n >= 15)  return "You rolled " + n + " — strong start. Initiative is yours.";
+      if (n >= 8)   return "You rolled " + n + " — solid. Let's move.";
+      return "You rolled " + n + " — rough start, but I've seen worse parties win.";
+    }
+    function settle(n){
+      die.classList.remove('crit','fail');
+      if (n === 20) die.classList.add('crit');
+      if (n === 1)  die.classList.add('fail');
+      out.textContent = flavor(n);
+      btn.removeAttribute('aria-busy');
+      rolling = false;
+    }
+    function roll(){
+      if (rolling) return; rolling = true;
+      var final = 1 + Math.floor(Math.random() * 20);
+      btn.setAttribute('aria-busy','true');
+      die.classList.remove('crit','fail');
+      if (reduce){ num.textContent = final; settle(final); return; }
+      die.classList.add('rolling');
+      var t = 0, iv = setInterval(function(){
+        num.textContent = 1 + Math.floor(Math.random() * 20); t += 60;
+        if (t >= 720){ clearInterval(iv); num.textContent = final; die.classList.remove('rolling'); settle(final); }
+      }, 60);
+    }
+    btn.addEventListener('click', roll);
   })();
 </script>
 </body>
