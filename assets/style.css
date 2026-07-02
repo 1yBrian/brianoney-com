@@ -8,6 +8,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Global media safety — images/video scale to their container and never overflow the viewport */
+img, picture, svg, video, canvas { max-width: 100%; }
+body { overflow-x: clip; }
+
 :root {
   --ink:            #1a1a18;
   --bg:             #ffffff;
@@ -286,7 +290,7 @@ nav {
   .reverse-strip--with-portrait .reverse-strip-inner {
     grid-template-columns: 1fr; gap: 28px;
   }
-  .reverse-strip--with-portrait .reverse-portrait { max-width: 220px; margin: 0 auto; }
+  .reverse-strip--with-portrait .reverse-portrait { width: min(66vw, 240px); max-width: 240px; margin: 0 auto; }
   .reverse-strip--with-portrait .reverse-strip-quote { text-align: center; }
   .reverse-strip--with-portrait blockquote { text-align: center; }
   .reverse-strip--with-portrait cite { text-align: center; }
