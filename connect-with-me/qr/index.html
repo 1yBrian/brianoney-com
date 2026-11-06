@@ -20,6 +20,9 @@
   img{width:min(88vw,62vh,520px);height:auto;margin:22px 0 18px;image-rendering:pixelated}
   .hint{font-size:14px}
   a{color:#8f6f2b;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:15px;margin-top:14px}
+  .share{margin-top:20px;min-height:58px;width:min(88vw,420px);border:none;border-radius:14px;cursor:pointer;
+    background:#16271d;color:#fbf8ef;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:18px;font-weight:600}
+  .share:active{transform:scale(.985)}
 </style>
 </head>
 <body>
@@ -28,7 +31,18 @@
   <p>Founder · Meliorist Group</p>
   <img src="/connect-with-me/qr.png" alt="QR code for brianoney.com/connect-with-me" />
   <p class="hint">Point your camera here — LinkedIn, sites, and my contact.</p>
+  <button class="share" id="shareBtn" type="button">↗ Share my link</button>
   <a href="/connect-with-me/">open the links page</a>
 </main>
+<script>
+document.getElementById("shareBtn").addEventListener("click", function(){
+  var url = "https://brianoney.com/connect-with-me";
+  var data = {title:"Brian Oney", text:"Great to meet you — here's how to reach me:", url:url};
+  var btn = this;
+  if (navigator.share) { navigator.share(data).catch(function(){}); return; }
+  if (navigator.clipboard) { navigator.clipboard.writeText(url).then(function(){ btn.textContent = "Link copied"; }); return; }
+  window.location.href = "sms:?body=" + encodeURIComponent(data.text + " " + url);
+});
+</script>
 </body>
 </html>
