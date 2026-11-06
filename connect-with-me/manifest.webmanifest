@@ -1,0 +1,13 @@
+{
+  "name": "Brian Oney — QR",
+  "short_name": "Brian QR",
+  "start_url": "/connect-with-me/qr/",
+  "scope": "/connect-with-me/",
+  "display": "standalone",
+  "background_color": "#fbf8ef",
+  "theme_color": "#fbf8ef",
+  "icons": [
+    {"src": "/connect-with-me/icon-180.png", "sizes": "180x180", "type": "image/png"},
+    {"src": "/connect-with-me/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

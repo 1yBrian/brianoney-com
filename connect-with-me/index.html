@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Brian Oney — Connect</title>
+<meta name="description" content="Brian Oney, MPA — Founder, Meliorist Group. Save my contact and find me online." />
+<meta name="theme-color" content="#16271d" />
+<link rel="apple-touch-icon" href="/connect-with-me/icon-180.png" />
+<link rel="icon" href="/connect-with-me/icon-180.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--forest-deep:#16271d;--forest:#1f3d2c;--gold:#c6a15b;--gold-soft:#e2c98a;--gold-deep:#8f6f2b;
+    --cream:#f7f3e8;--cream-2:#fbf8ef;--ink:#1e2a22;--muted:#5c6b60;--line:rgba(31,61,44,0.14);
+    --sans:"DM Sans",system-ui,-apple-system,Helvetica,Arial,sans-serif;--serif:"Spectral",Georgia,serif;}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:480px;margin:0 auto;padding:0 16px 40px}
+  .hero{margin:0 -16px;padding:44px 24px 34px;color:var(--cream);text-align:center;
+    background:linear-gradient(165deg,#16271d 0%,#1f3d2c 60%,#21422e 100%)}
+  .avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--gold-soft);display:block;margin:0 auto 16px}
+  h1{font-family:var(--serif);font-weight:500;font-size:30px;margin:0;line-height:1.15}
+  .role{color:var(--gold-soft);font-size:15px;margin:6px 0 0}
+  .links{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+  .btn{display:flex;align-items:center;gap:14px;min-height:64px;padding:10px 18px;border-radius:14px;
+    background:#fff;border:1px solid var(--line);color:var(--forest);text-decoration:none;font-size:17px;font-weight:500;
+    font-family:var(--sans);width:100%;cursor:pointer;text-align:left}
+  .btn:active{transform:scale(.985)}
+  .btn .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;flex:none;background:var(--cream);color:var(--forest);font-size:17px;font-weight:600}
+  .btn .t{display:flex;flex-direction:column;line-height:1.25}
+  .btn .s{font-size:13px;font-weight:400;color:var(--muted)}
+  .primary{background:linear-gradient(135deg,#e2c98a 0%,#c6a15b 60%,#b88f47 100%);border:none;color:var(--forest-deep)}
+  .primary .ic{background:rgba(22,39,29,.12);color:var(--forest-deep)}
+  .primary .s{color:rgba(22,39,29,.75)}
+  .li .ic{background:#0a66c2;color:#fff}
+  .foot{font-size:13px;color:var(--muted);text-align:center;margin-top:26px}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <img class="avatar" src="https://signal-os.org/images/well/owner/photo-20170713-085553.jpg" alt="Brian Oney" />
+    <h1>Brian Oney, MPA</h1>
+    <p class="role">Founder · Meliorist Group</p>
+  </header>
+
+  <nav class="links" aria-label="Ways to connect with Brian">
+    <button class="btn primary" id="saveBtn" type="button"><span class="ic" aria-hidden="true">＋</span><span class="t">Save my contact<span class="s">Adds Brian to your phone</span></span></button>
+    <a class="btn li" href="https://www.linkedin.com/in/brian7oney"><span class="ic" aria-hidden="true">in</span><span class="t">LinkedIn<span class="s">linkedin.com/in/brian7oney</span></span></a>
+    <a class="btn" href="https://brianoney.com"><span class="ic" aria-hidden="true">B</span><span class="t">BrianOney.com<span class="s">Who I am and what I build</span></span></a>
+    <a class="btn" href="https://melioristgroup.com"><span class="ic" aria-hidden="true">M</span><span class="t">MelioristGroup.com<span class="s">My company</span></span></a>
+    <a class="btn" href="https://crackingthecodetosuccessprofits.com"><span class="ic" aria-hidden="true">C</span><span class="t">Cracking the Code to Success and Profits<span class="s">The program I run</span></span></a>
+    <a class="btn" href="mailto:brian@melioristgroup.com?subject=Great%20to%20meet%20you"><span class="ic" aria-hidden="true">✉</span><span class="t">Email Brian<span class="s">brian@melioristgroup.com</span></span></a>
+    <button class="btn" id="shareBtn" type="button"><span class="ic" aria-hidden="true">↗</span><span class="t">Share this page<span class="s">Pass Brian along to a friend</span></span></button>
+  </nav>
+
+  <p class="foot">Brian Oney · <a href="/connect-with-me/qr/">show QR code</a></p>
+</main>
+<script>
+(function(){
+  var vcf = ["BEGIN:VCARD","VERSION:3.0","N:Oney;Brian;;;MPA","FN:Brian Oney","ORG:Meliorist Group",
+    "TITLE:Founder","EMAIL;TYPE=INTERNET,WORK:brian@melioristgroup.com",
+    "URL;TYPE=LinkedIn:https://www.linkedin.com/in/brian7oney","URL:https://brianoney.com",
+    "URL:https://melioristgroup.com","URL:https://crackingthecodetosuccessprofits.com",
+    "NOTE:Met in person. Connect page: https://brianoney.com/connect-with-me","END:VCARD"].join("\r\n");
+  document.getElementById("saveBtn").addEventListener("click", function(){
+    var blob = new Blob([vcf], {type:"text/vcard;charset=utf-8"});
+    var file = null;
+    try { file = new File([blob], "Brian Oney.vcf", {type:"text/vcard"}); } catch(e) {}
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "Brian Oney.vcf";
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 1500);
+  });
+  document.getElementById("shareBtn").addEventListener("click", function(){
+    var data = {title:"Brian Oney", text:"Brian Oney — Founder, Meliorist Group", url:"https://brianoney.com/connect-with-me"};
+    if (navigator.share) { navigator.share(data).catch(function(){}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(data.url); this.querySelector(".s").textContent = "Link copied"; }
+  });
+})();
+</script>
+</body>
+</html>
